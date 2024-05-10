@@ -1,3 +1,11 @@
+-- Function Description:
+-- Safely divides two integers 'a' and 'b', returning a FLOAT result.
+-- Parameters:
+--   - a: Numerator (INT)
+--   - b: Denominator (INT)
+-- If 'b' is 0, sets the result to 0 to avoid division by zero error.
+-- Otherwise, computes the division of 'a' by 'b' and returns the result.
+
 DELIMITER //
 
 CREATE FUNCTION SafeDiv(a INT, b INT)

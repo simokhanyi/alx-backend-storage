@@ -1,3 +1,7 @@
+-- Index Maintenance:
+-- Drops the index 'idx_name_first_score' on the 'names' table if it already exists.
+-- Creates an index on the first letter of the 'name' column and the 'score' column in the 'names' table.
+
 USE holberton;
 
 -- Drop the index if it already exists

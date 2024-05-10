@@ -1,3 +1,11 @@
+-- Procedure Description:
+-- Computes the average weighted score for a specified user.
+-- Parameters:
+--   - user_id: ID of the user (INT)
+-- Calculates the total weighted score and total weight for the user by summing the product of correction scores and project weights.
+-- Updates the 'average_score' column in the 'users' table with the computed average weighted score.
+-- If the total weight is 0, sets the average score to 0 to avoid division by zero.
+
 DELIMITER //
 
 CREATE PROCEDURE ComputeAverageWeightedScoreForUser(IN user_id INT)

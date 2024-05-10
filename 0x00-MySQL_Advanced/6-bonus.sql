@@ -1,3 +1,11 @@
+-- Procedure Description:
+-- This stored procedure, 'AddBonus', is designed to add bonus scores for a specific user and project in the database.
+-- It takes three input parameters: 'p_user_id' (user ID), 'p_project_name' (project name), and 'p_score' (bonus score).
+-- The procedure first checks if the project exists by querying the 'projects' table based on the provided project name.
+-- If the project does not exist, it creates a new project entry in the 'projects' table.
+-- Then, it inserts a new record into the 'corrections' table with the provided user ID, project ID, and bonus score.
+-- This procedure is useful for managing bonus scoring systems within the application.
+
 DELIMITER //
 
 CREATE PROCEDURE AddBonus(

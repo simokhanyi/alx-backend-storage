@@ -1,3 +1,12 @@
+-- Procedure Description:
+-- Adds bonus scores for a user and project in the database.
+-- Parameters: 
+--   - p_user_id: User ID (INT)
+--   - p_project_name: Project name (VARCHAR)
+--   - p_score: Bonus score (INT)
+-- Checks if the project exists; if not, creates it.
+-- Inserts a new record into the 'corrections' table with user ID, project ID, and bonus score.
+
 DELIMITER //
 
 CREATE PROCEDURE ComputeAverageScoreForUser(

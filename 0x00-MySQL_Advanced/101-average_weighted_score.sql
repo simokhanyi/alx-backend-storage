@@ -1,3 +1,8 @@
+-- Procedure Description:
+-- Computes the average weighted score for all users in the database.
+-- Iterates over each user using a cursor, calculating their total weighted score and total weight.
+-- Updates the 'average_score' column in the 'users' table with the computed average weighted score for each user.
+
 DELIMITER //
 
 CREATE PROCEDURE ComputeAverageWeightedScoreForUsers()
