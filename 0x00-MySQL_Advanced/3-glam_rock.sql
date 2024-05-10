@@ -7,12 +7,5 @@
 -- It is intended to be executed on any SQL database.
 
 -- Query Explanation:
-SELECT 
-    band_name,
-    TIMESTAMPDIFF(YEAR, formed, IFNULL(split, '2022-01-01')) AS lifespan
-FROM 
-    metal_bands
-WHERE 
-    style = 'Glam rock'
-ORDER BY 
-    lifespan DESC;
+SELECT band_name, COALESCE(split, 2022) - formed as lifespan FROM metal_bands
+WHERE style LIKE '%Glam rock%' ORDER BY lifespan DESC;
