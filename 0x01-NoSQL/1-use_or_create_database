@@ -1,0 +1,4 @@
+//Script to create or use the database my_db in MongoDB
+
+//Using a here document to pass commands directly to the mongo shell
+use my_db
